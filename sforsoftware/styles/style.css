@@ -29,7 +29,7 @@ h2 {
 }
 
 #item {
-    flex-grow: 0;
+    flex-grow: 1;
     flex-shrink: 0;
     flex-basis: 0;
     border: 1px black solid;
