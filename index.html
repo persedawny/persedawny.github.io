@@ -17,8 +17,8 @@
             <div class="container-fluid">
                 <a class="navbar-brand" href="#" style="font-family: ComicMono;">Persedawny</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -53,12 +53,52 @@
 
         <div class="card main-card">
             <div class="card-header">
-                Featured
+                Home
             </div>
             <div class="card-body">
-                <h5 class="card-title">Special title treatment</h5>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <h5 class="card-title">Welcome</h5>
+                <p class="card-text">... and thank you for checking out my work!</p>
+                <p class="card-text">
+                    On this site you will be able to check out updates for my different projects or find out what I'm up
+                    to in general.
+                    I might even share a post every so often about a variety of subjects.
+                </p>
+
+                <div id="data-container"></div>
+
+                <div class="card-group">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">Last updated 3 mins ago</small>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This card has supporting text below as a natural lead-in to additional
+                                content.</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">Last updated 3 mins ago</small>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This card has even longer content than the first to show that equal
+                                height action.</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">Last updated 3 mins ago</small>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -70,6 +110,34 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
+
+    <script>
+        // Function to fetch and display JSON data
+        function fetchData() {
+            fetch('apps.json') // Replace 'data.json' with the actual path to your JSON file
+                .then(response => response.json())
+                .then(data => {
+                    const dataContainer = document.getElementById('data-container');
+
+                    // Loop through the JSON objects and create a div for each one
+                    data.forEach(item => {
+                        const div = document.createElement('div');
+                        div.innerHTML = `
+                                <h2>${item.name}</h2>
+                                <p>Version: ${item.version}</p>
+                                <p>Status: ${item.status}</p>
+                            `;
+                        dataContainer.appendChild(div);
+                    });
+                })
+                .catch(error => {
+                    console.error('Error fetching JSON data:', error);
+                });
+        }
+
+        // Call the fetchData function to load and display the data
+        fetchData();
+    </script>
 </body>
 
 </html>
