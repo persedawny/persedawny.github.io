@@ -64,7 +64,12 @@
                     I might even share a post every so often about a variety of subjects.
                 </p>
 
-                <div id="projects" class="card-group"></div>
+                <div class="container text-center">
+                    <div class="row align-items-start">
+                        <div id="projects" class="card-group"></div>
+                    </div>
+                </div>
+                
             </div>
         </div>
     </div>
@@ -88,6 +93,8 @@
                     // Loop through the JSON objects and create a div for each one
                     data.forEach(item => {
                         const div = document.createElement('div');
+                        div.classList.add("col-6");
+                        div.classList.add("col-sm-3");
                         div.classList.add("card");
                         div.classList.add("m-3");
 
