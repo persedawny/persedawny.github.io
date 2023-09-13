@@ -64,39 +64,7 @@
                     I might even share a post every so often about a variety of subjects.
                 </p>
 
-                <div id="projects" class="card-group">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This content is a little bit longer.</p>
-                        </div>
-                        <div class="card-footer">
-                            <small class="text-muted">Last updated 3 mins ago</small>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This card has supporting text below as a natural lead-in to additional
-                                content.</p>
-                        </div>
-                        <div class="card-footer">
-                            <small class="text-muted">Last updated 3 mins ago</small>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This card has even longer content than the first to show that equal
-                                height action.</p>
-                        </div>
-                        <div class="card-footer">
-                            <small class="text-muted">Last updated 3 mins ago</small>
-                        </div>
-                    </div>
-                </div>
+                <div id="projects" class="card-group"></div>
             </div>
         </div>
     </div>
@@ -133,10 +101,12 @@
                         }
 
                         div.innerHTML = `
-                                <div class="card-body">
+                                <div class="card-body m-3">
                                     <h5 class="card-title">${item.name}</h5>
                                     <p>Version: ${item.version}</p>
-                                    <p>Status: ${item.status}</p>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-muted">Status: ${item.status}</small>
                                 </div>
                         `;
                         dataContainer.appendChild(div);
