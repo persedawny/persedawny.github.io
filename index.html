@@ -64,9 +64,7 @@
                     I might even share a post every so often about a variety of subjects.
                 </p>
 
-                <div id="data-container"></div>
-
-                <div class="card-group">
+                <div id="projects" class="card-group">
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
@@ -117,7 +115,7 @@
             fetch('apps.json') // Replace 'data.json' with the actual path to your JSON file
                 .then(response => response.json())
                 .then(data => {
-                    const dataContainer = document.getElementById('data-container');
+                    const dataContainer = document.getElementById('projects');
 
                     // Loop through the JSON objects and create a div for each one
                     data.forEach(item => {
