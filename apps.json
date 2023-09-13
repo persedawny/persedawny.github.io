@@ -3,5 +3,10 @@
         "name": "Money Manager",
         "version": "0.0.1",
         "status": "in dev"
+    },
+    {
+        "name": "JadeBot",
+        "version": "0.0.1",
+        "status": "in dev"
     }
 ]
