@@ -6,6 +6,10 @@
     min-height: calc(100vh - 30px);
 }
 
+.projectsRow {
+    padding: 0px !important;
+}
+
 footer {
     height: 30px;
 }
