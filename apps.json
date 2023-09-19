@@ -1,13 +1,13 @@
 [
     {
         "name": "Money Manager",
-        "version": "0.0.1",
+        "version": "0.0.0.1",
         "status": "in dev",
         "description": "My own simple budget management app, because taking care of your money shouldn't be difficult."
     },
     {
         "name": "JadeBot",
-        "version": "0.0.1",
+        "version": "0.0.0.1",
         "status": "in dev",
         "description": ""
     }
